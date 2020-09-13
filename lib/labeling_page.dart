@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_desktop1/main.dart';
 import 'package:flutter_desktop1/process_page.dart';
 import 'package:get/get.dart';
-import 'components/arrowButton.dart';
+import 'components/arrow_button.dart';
+import 'components/page_bar.dart';
+import 'components/setting_card.dart';
 
 class LabelingPage extends StatefulWidget {
   LabelingPage({Key key, this.title}) : super(key: key);
@@ -13,70 +15,35 @@ class LabelingPage extends StatefulWidget {
   _LabelingPageState createState() => _LabelingPageState();
 }
 
-class _LabelingPageState extends State<LabelingPage>
-    with SingleTickerProviderStateMixin {
-  var showIcon = 'assets/images/Subtract_light.png';
-  static final Color defaultColor = Color(0xffc4c4c4);
-  static final Color deepColor = Color(0xff939393);
-  var imagingColor = _LabelingPageState.defaultColor;
-  var processColor = _LabelingPageState.defaultColor;
-  var labelingColor = _LabelingPageState.deepColor;
-
-  TabController _controller;
-  @override
-  void initState() {
-    super.initState();
-    _controller = TabController(length: 3, vsync: this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
+class _LabelingPageState extends State<LabelingPage> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+    return Container(
+        width: 1920,
+        height: 1080,
+        child: Stack(
           children: [
-            Row(
-              children: [
-                SizedBox(
-                  width: 20,
+            Positioned(
+                left: 30, top: 10, width: 500, height: 300, child: PageBar()),
+            Positioned(
+              left: 30,
+              top: 90,
+              child: SettingTab(titles: [
+                'Conventional',
+                'AI'
+              ], contents: [
+                Column(
+                  children: [
+                    Text('hello'),
+                    MaterialButton(child: Text('I am button'), onPressed: () {})
+                  ],
                 ),
-                ArrowButton(
-                    onPressed: () {
-                      Get.offAll(MyHomePage(),
-                          transition: Transition.noTransition,
-                          duration: Duration(seconds: 0));
-                    },
-                    text: "  Imaging",
-                    color: imagingColor),
-                ArrowButton(
-                  text: "       Image Process",
-                  color: processColor,
-                  onPressed: () {
-                    Get.offAll(ProcessPage(),
-                        transition: Transition.noTransition,
-                        duration: Duration(seconds: 0));
-                  },
+                Column(
+                  children: [],
                 ),
-                ArrowButton(
-                  text: "  Labeling",
-                  color: labelingColor,
-                  onPressed: () {},
-                ),
-              ],
-            ),
+              ]),
+            )
           ],
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-        ),
-      ],
-    );
+        ));
   }
 }

@@ -12,7 +12,7 @@ class ArrowButton extends StatelessWidget {
       clipper: MyShapeClipper(),
       child: Container(
         decoration: BoxDecoration(
-          color: color ?? Color(0xff939393),
+          color: color,
           boxShadow: [
             BoxShadow(
               // color: Colors.black.withOpacity(0.5),
