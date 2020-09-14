@@ -17,10 +17,10 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
       icon: Icon(Icons.arrow_downward),
       iconSize: 24,
       elevation: 16,
-      style: TextStyle(color: Colors.deepPurple),
+      style: TextStyle(color: Colors.grey),
       underline: Container(
         height: 2,
-        color: Colors.deepPurpleAccent,
+        color: Colors.grey,
       ),
       onChanged: (String newValue) {
         setState(() {

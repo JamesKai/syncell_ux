@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop1/main.dart';
-import 'package:flutter_desktop1/process_page.dart';
-import 'package:get/get.dart';
-import 'components/arrow_button.dart';
+
 import 'components/page_bar.dart';
 import 'components/setting_card.dart';
 

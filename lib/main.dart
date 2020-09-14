@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop1/components/arrow_button.dart';
-import 'package:flutter_desktop1/components/image_frame.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
-import 'package:flutter_desktop1/components/setting_card.dart';
-import 'package:flutter_desktop1/process_page.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'controller/page_bar_controller.dart';
-import 'labeling_page.dart';
+
+import 'components/setting_card.dart';
 
 void main() {
   runApp(MyApp());
@@ -50,14 +46,39 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 1920,
-      height: 1080,
-      child: Stack(
-        children: [
-          Positioned(
-              left: 30, top: 10, width: 500, height: 300, child: PageBar())
-        ],
+    return Scaffold(
+      body: Container(
+        width: 1920,
+        height: 1080,
+        child: Stack(
+          children: [
+            Positioned(
+              left: 30,
+              top: 10,
+              width: 500,
+              height: 300,
+              child: PageBar(),
+            ),
+            Positioned(
+              left: 30,
+              top: 90,
+              child: SettingTab(titles: [
+                'Conventional',
+                'AI'
+              ], contents: [
+                Column(
+                  children: [
+                    Text('hello'),
+                    MaterialButton(child: Text('I am button'), onPressed: () {})
+                  ],
+                ),
+                Column(
+                  children: [],
+                ),
+              ]),
+            )
+          ],
+        ),
       ),
     );
   }

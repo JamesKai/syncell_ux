@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   get: ^3.10.2
   responsive_framework: ^0.0.8
+  syncfusion_flutter_sliders: ^18.2.57-beta
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

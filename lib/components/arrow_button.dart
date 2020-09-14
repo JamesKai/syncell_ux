@@ -3,9 +3,9 @@ import 'package:flutter_desktop1/helper/shape_clipper.dart';
 
 class ArrowButton extends StatelessWidget {
   ArrowButton({this.color, @required this.text, @required this.onPressed});
-  String text;
+  final String text;
   final Color color;
-  void Function() onPressed;
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return ClipPath(
