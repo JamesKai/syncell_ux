@@ -19,32 +19,31 @@ class _ProcessPageState extends State<ProcessPage> {
   MyController countController = Get.put(MyController());
   @override
   Widget build(BuildContext context) {
-    return Container(
-        width: 1920,
-        height: 1080,
-        child: Stack(
-          children: [
-            Positioned(
-                left: 30, top: 10, width: 500, height: 300, child: PageBar()),
-            Positioned(
-              left: 30,
-              top: 90,
-              child: SettingTab(titles: [
-                'Conventional',
-                'AI'
-              ], contents: [
-                Column(
-                  children: [
-                    Text('hello'),
-                    MaterialButton(child: Text('I am button'), onPressed: () {})
-                  ],
-                ),
-                Column(
-                  children: [],
-                ),
-              ]),
-            )
-          ],
-        ));
+    return Scaffold(
+      body: Container(
+          width: 1920,
+          height: 1080,
+          child: Stack(
+            children: [
+              Positioned(
+                  left: 30, top: 10, width: 500, height: 300, child: PageBar()),
+              Positioned(
+                left: 30,
+                top: 90,
+                child: SettingTab(titles: [
+                  'Conventional',
+                  'AI'
+                ], contents: [
+                  Column(
+                    children: [],
+                  ),
+                  Column(
+                    children: [],
+                  ),
+                ]),
+              )
+            ],
+          )),
+    );
   }
 }

@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 class MyController extends GetxController {
   static final Color defaultColor = Color(0xffc4c4c4);
   static final Color deepColor = Color(0xff939393);
-  Color imagingColor = Color(0xffc4c4c4);
-  Color processColor = Color(0xffc4c4c4);
-  Color labelingColor = Color(0xffc4c4c4);
+  Color imagingColor = deepColor;
+  Color processColor = defaultColor;
+  Color labelingColor = defaultColor;
 
   void updateColor(PageName pageName) {
     if (PageName.imaging == pageName) {

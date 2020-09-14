@@ -29,7 +29,7 @@ class SettingTab extends StatelessWidget {
               left: 10,
               top: 270,
               right: 10,
-              height: 400,
+              bottom: 10,
               child: EditCard(
                 titles: titles,
                 contents: contents,

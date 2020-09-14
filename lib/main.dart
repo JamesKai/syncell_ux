@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop1/components/light_button.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
       ),
       title: 'Flutter Web',
       theme: ThemeData(
+        brightness: Brightness.light,
+        primaryColor: Color(0xffc4c4c4),
+        accentColor: Color(0xff939393),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -63,14 +67,12 @@ class _MyHomePageState extends State<MyHomePage> {
               left: 30,
               top: 90,
               child: SettingTab(titles: [
-                'Conventional',
-                'AI'
+                'Acquire Image',
+                'Acquuire Multilayer Image'
               ], contents: [
                 Column(
-                  children: [
-                    Text('hello'),
-                    MaterialButton(child: Text('I am button'), onPressed: () {})
-                  ],
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [GreenButton(), BlueButton(), WhiteButton()],
                 ),
                 Column(
                   children: [],
