@@ -10,8 +10,8 @@ class ImageFrame extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(0),
       child: Container(
-        width: 300,
-        height: 300,
+        width: 700,
+        height: 700,
         decoration: BoxDecoration(
           color: const Color(0xffC4C4C4),
           image: const DecorationImage(

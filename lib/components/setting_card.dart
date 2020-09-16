@@ -22,7 +22,7 @@ class SettingTab extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.0),
         ),
         margin: EdgeInsets.zero,
-        color: Color(0xff939393),
+        color: Color(0xffAAAAAA),
         child: Stack(
           children: [
             Positioned(

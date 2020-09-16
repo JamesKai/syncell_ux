@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_desktop1/components/light_button.dart';
+import 'package:flutter_desktop1/components/image_frame.dart';
+import 'package:flutter_desktop1/components/light_switch.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-
+import 'package:getwidget/getwidget.dart';
 import 'components/setting_card.dart';
 
 void main() {
@@ -17,37 +18,36 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       builder: (context, widget) => ResponsiveWrapper.builder(
         BouncingScrollWrapper.builder(context, widget),
-        maxWidth: 2460,
-        minWidth: 1200,
+        maxWidth: 2180,
+        minWidth: 1920,
         defaultScale: true,
         breakpoints: [
-          ResponsiveBreakpoint.resize(1200, name: DESKTOP),
-          ResponsiveBreakpoint.resize(1800, name: DESKTOP),
-          ResponsiveBreakpoint.autoScale(2460, name: '4K'),
+          ResponsiveBreakpoint.resize(1920, name: DESKTOP),
+          ResponsiveBreakpoint.resize(2180, name: DESKTOP),
         ],
       ),
       title: 'Flutter Web',
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: Color(0xffc4c4c4),
-        accentColor: Color(0xff939393),
+        accentColor: Color(0xffAAAAAAA),
+        textTheme: Typography.blackMountainView,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,13 +72,17 @@ class _MyHomePageState extends State<MyHomePage> {
               ], contents: [
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [GreenButton(), BlueButton(), WhiteButton()],
-                ),
-                Column(
                   children: [],
                 ),
+                Column(
+                  children: [
+                    //
+                  ],
+                ),
               ]),
-            )
+            ),
+            Positioned(top: 110, left: 450, child: ImageFrame()),
+            Positioned(top: 110, left: 1170, child: ImageFrame())
           ],
         ),
       ),

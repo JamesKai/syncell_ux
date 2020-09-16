@@ -13,20 +13,17 @@ class LUT_RangeSlider extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          Container(
-            width: 350,
-            height: 30,
-          ),
           Positioned(
               left: 5,
-              bottom: 8,
+              top: 14,
               child: Text(
                 '0',
                 style: TextStyle(color: Colors.grey[600]),
               )),
-          Container(
-            width: 250,
-            height: 25,
+          Positioned(
+            left: 0,
+            width: 210,
+            bottom: 0,
             child: GetBuilder<LUT_RangeSliderController>(
               builder: (_) => RangeSlider(
                 values: _.rangeValues,
@@ -46,8 +43,8 @@ class LUT_RangeSlider extends StatelessWidget {
             ),
           ),
           Positioned(
-              left: 233,
-              bottom: 8,
+              left: 200,
+              top: 14,
               width: 60,
               child: Text(
                 '65535',
