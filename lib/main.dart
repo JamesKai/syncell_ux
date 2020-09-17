@@ -75,8 +75,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    //
+                    Container(
+                      width: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.grey, width: 1.0),
+                      ),
+                      child: Center(
+                        child: TextField(
+                          textAlign: TextAlign.center,
+                          decoration: InputDecoration(
+                            contentPadding: EdgeInsets.all(0),
+                            hintText: " ",
+                            // border: InputBorder.none
+                          ),
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ]),
