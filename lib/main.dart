@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_desktop1/components/bottom_bar_card.dart';
 import 'package:flutter_desktop1/components/image_frame.dart';
 import 'package:flutter_desktop1/components/light_switch.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
+import 'package:flutter_desktop1/components/text_field_input.dart';
+import 'package:flutter_desktop1/controller/light_text_field_controller.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 import 'package:getwidget/getwidget.dart';
@@ -50,58 +53,42 @@ class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: 1920,
-        height: 1080,
-        child: Stack(
-          children: [
-            Positioned(
-              left: 30,
-              top: 10,
-              width: 500,
-              height: 300,
-              child: PageBar(),
-            ),
-            Positioned(
-              left: 30,
-              top: 90,
-              child: SettingTab(titles: [
-                'Acquire Image',
-                'Acquuire Multilayer Image'
-              ], contents: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [],
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 50,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.grey, width: 1.0),
-                      ),
-                      child: Center(
-                        child: TextField(
-                          textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                            contentPadding: EdgeInsets.all(0),
-                            hintText: " ",
-                            // border: InputBorder.none
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ]),
-            ),
-            Positioned(top: 110, left: 450, child: ImageFrame()),
-            Positioned(top: 110, left: 1170, child: ImageFrame())
-          ],
+    return InteractiveViewer(
+      child: Scaffold(
+        body: Container(
+          width: 1920,
+          height: 1080,
+          child: Stack(
+            children: [
+              Positioned(
+                left: 30,
+                top: 10,
+                width: 500,
+                height: 300,
+                child: PageBar(),
+              ),
+              Positioned(
+                left: 30,
+                top: 90,
+                child: SettingTab(titles: [
+                  'Acquire Image',
+                  'Acquuire Multilayer Image'
+                ], contents: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [],
+                  ),
+                ]),
+              ),
+              Positioned(top: 95, left: 450, child: ImageFrame()),
+              Positioned(top: 95, left: 1170, child: ImageFrame()),
+              Positioned(top: 840, left: 450, child: BottomBarCard())
+            ],
+          ),
         ),
       ),
     );

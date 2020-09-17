@@ -15,31 +15,37 @@ class LabelingPage extends StatefulWidget {
 class _LabelingPageState extends State<LabelingPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-          width: 1920,
-          height: 1080,
-          child: Stack(
-            children: [
-              Positioned(
-                  left: 30, top: 10, width: 500, height: 300, child: PageBar()),
-              Positioned(
-                left: 30,
-                top: 90,
-                child: SettingTab(titles: [
-                  'Labeling',
-                  'Label Setting'
-                ], contents: [
-                  Column(
-                    children: [],
-                  ),
-                  Column(
-                    children: [],
-                  ),
-                ]),
-              )
-            ],
-          )),
+    return InteractiveViewer(
+      child: Scaffold(
+        body: Container(
+            width: 1920,
+            height: 1080,
+            child: Stack(
+              children: [
+                Positioned(
+                    left: 30,
+                    top: 10,
+                    width: 500,
+                    height: 300,
+                    child: PageBar()),
+                Positioned(
+                  left: 30,
+                  top: 90,
+                  child: SettingTab(titles: [
+                    'Labeling',
+                    'Label Setting'
+                  ], contents: [
+                    Column(
+                      children: [],
+                    ),
+                    Column(
+                      children: [],
+                    ),
+                  ]),
+                )
+              ],
+            )),
+      ),
     );
   }
 }

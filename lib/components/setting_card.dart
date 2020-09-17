@@ -26,6 +26,8 @@ class SettingTab extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
+                left: 10, right: 10, top: 10, height: 250, child: LightCard()),
+            Positioned(
               left: 10,
               top: 270,
               right: 10,
@@ -35,8 +37,6 @@ class SettingTab extends StatelessWidget {
                 contents: contents,
               ),
             ),
-            Positioned(
-                left: 10, right: 10, top: 10, height: 250, child: LightCard()),
           ],
         ),
       ),
