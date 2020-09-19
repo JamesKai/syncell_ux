@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop1/components/bottom_bar_card.dart';
+import 'package:flutter_desktop1/components/control_pad_card.dart';
 import 'package:flutter_desktop1/components/image_frame.dart';
-import 'package:flutter_desktop1/components/light_switch.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
-import 'package:flutter_desktop1/components/text_field_input.dart';
-import 'package:flutter_desktop1/controller/light_text_field_controller.dart';
+
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
-import 'package:getwidget/getwidget.dart';
 import 'components/setting_card.dart';
 
 void main() {
@@ -51,6 +49,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
+  ImageController _controller1 = Get.put(ImageController());
+
   @override
   Widget build(BuildContext context) {
     return InteractiveViewer(
@@ -84,9 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ]),
               ),
-              Positioned(top: 95, left: 450, child: ImageFrame()),
-              Positioned(top: 95, left: 1170, child: ImageFrame()),
-              Positioned(top: 840, left: 450, child: BottomBarCard())
+              Positioned(
+                top: 95,
+                left: 450,
+                child: ImageFrame(
+                  image: _controller1.molecularImage,
+                ),
+              ),
+              Positioned(
+                top: 95,
+                left: 1170,
+                child: ImageFrame(
+                  image: _controller1.oweImage,
+                ),
+              ),
+              Positioned(top: 840, left: 450, child: BottomBarCard()),
+              Positioned(top: 840, left: 1630, child: ControlPadCard())
             ],
           ),
         ),
