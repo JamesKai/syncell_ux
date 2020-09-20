@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop1/components/bottom_bar_card.dart';
 import 'package:flutter_desktop1/components/control_pad_card.dart';
+import 'package:flutter_desktop1/components/custom_drop_down.dart';
 import 'package:flutter_desktop1/components/image_frame.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
 
@@ -76,7 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ], contents: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [],
+                    children: [
+                      SimpleAccountMenu(
+                        icons: <Icon>[
+                          Icon(Icons.ac_unit),
+                          Icon(Icons.access_alarm),
+                        ],
+                      )
+                    ],
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
