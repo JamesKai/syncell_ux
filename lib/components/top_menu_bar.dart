@@ -13,15 +13,27 @@ class TopMenuBar extends StatelessWidget {
         color: Colors.black,
         child: Row(
           children: [
-            TopPopupMenuButton(name: 'File'),
             SizedBox(
               width: 20,
             ),
-            TopPopupMenuButton(name: 'Setting'),
+            TopPopupMenuButton(
+              name: 'File',
+              color: Colors.white,
+            ),
             SizedBox(
               width: 20,
             ),
-            TopPopupMenuButton(name: 'Help')
+            TopPopupMenuButton(
+              name: 'Setting',
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            TopPopupMenuButton(
+              name: 'Help',
+              color: Colors.white,
+            )
           ],
         ),
       ),

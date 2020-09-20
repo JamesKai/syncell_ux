@@ -14,7 +14,7 @@ class TopPopupMenuButton extends StatelessWidget {
     return PopupMenuButton(
       offset: Offset(0, 100),
       onCanceled: () {
-        Get.back();
+        // Get.back(closeOverlays: true);
       },
       child: Text(
         name,

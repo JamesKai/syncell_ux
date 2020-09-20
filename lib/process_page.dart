@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 
 import 'components/image_frame.dart';
 import 'components/page_bar.dart';
+import 'components/top_menu_bar.dart';
 
 class ProcessPage extends StatefulWidget {
   ProcessPage({Key key, this.title}) : super(key: key);
@@ -49,7 +50,8 @@ class _ProcessPageState extends State<ProcessPage> {
                   ]),
                 ),
                 Positioned(top: 110, left: 450, child: ImageFrame()),
-                Positioned(top: 110, left: 1170, child: ImageFrame())
+                Positioned(top: 110, left: 1170, child: ImageFrame()),
+                Positioned(top: 0, left: 0, child: TopMenuBar())
               ],
             )),
       ),

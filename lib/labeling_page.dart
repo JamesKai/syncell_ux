@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'components/page_bar.dart';
 import 'components/setting_card.dart';
+import 'components/top_menu_bar.dart';
 
 class LabelingPage extends StatefulWidget {
   LabelingPage({Key key, this.title}) : super(key: key);
@@ -42,7 +43,8 @@ class _LabelingPageState extends State<LabelingPage> {
                       children: [],
                     ),
                   ]),
-                )
+                ),
+                Positioned(top: 0, left: 0, child: TopMenuBar())
               ],
             )),
       ),
