@@ -1,9 +1,7 @@
 import 'package:control_pad/control_pad.dart';
 import 'package:control_pad/models/pad_button_item.dart';
-import 'package:control_pad/views/joystick_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop1/controller/lamp_slider_controller.dart';
-import 'package:flutter_desktop1/controller/light_change_controller.dart';
 import 'package:get/get.dart';
 
 class ControlPad extends StatelessWidget {
