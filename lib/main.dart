@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_desktop1/components/bottom_bar_card.dart';
 import 'package:flutter_desktop1/components/control_pad_card.dart';
-import 'package:flutter_desktop1/components/custom_drop_down.dart';
 import 'package:flutter_desktop1/components/image_frame.dart';
 import 'package:flutter_desktop1/components/page_bar.dart';
+import 'package:flutter_desktop1/components/popup_menu_button.dart';
+import 'package:flutter_desktop1/components/top_menu_bar.dart';
 
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
@@ -77,14 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ], contents: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      SimpleAccountMenu(
-                        icons: <Icon>[
-                          Icon(Icons.ac_unit),
-                          Icon(Icons.access_alarm),
-                        ],
-                      )
-                    ],
+                    children: [],
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +101,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Positioned(top: 840, left: 450, child: BottomBarCard()),
-              Positioned(top: 840, left: 1630, child: ControlPadCard())
+              Positioned(top: 840, left: 1630, child: ControlPadCard()),
+              Positioned(top: 0, left: 0, child: TopMenuBar())
             ],
           ),
         ),
